@@ -1,0 +1,28 @@
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool, specifically when used with LiteIDE
+*.out
+
+conf/config.yaml
+
+# Dependency directories
+vendor/
+
+.idea
+
+docs/*.json
+docs/*.yaml
+
+# 配置文件
+appsettings.*.yaml
+
+/go-to-cloud
+/internal/agent/k8s.config.*.yml

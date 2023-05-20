@@ -1,0 +1,29 @@
+name: Test and Coverage
+
+on:
+  pull_request:
+    branches:
+      - "main"
+  push:
+    branches:
+      - "main"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: '1.19'
+      - name: Go Module Downloads
+        run: go mod tidy
+      - name: Run coverage
+        run: go test -test.short -race -coverprofile=coverage.txt -covermode=atomic ./...
+      - name: Upload coverage reports to Codecov
+        run: |
+          curl -Os https://uploader.codecov.io/latest/linux/codecov
+          chmod +x codecov
+          ./codecov -t ${{secrets.Codecov_Token}}
