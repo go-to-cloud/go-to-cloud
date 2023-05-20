@@ -1,0 +1,11 @@
+db:
+  user: # change it
+  password: #change it
+  host: #change it
+  schema: gotocloud # 数据库名，默认不用修改
+jwt:
+  security: thisisunsafeuntilyouchangit
+  realm: GOTOCLOUD
+  idkey: id
+builder:
+  kaniko: go-to-cloud-docker.pkg.coding.net/devops/kaniko/executor:debug
