@@ -6,7 +6,7 @@
 
 ## Intro 介绍
 
-### [官网](https://www.gotocloud.vip) | [在线体验](https://demo.gotocloud.vip)
+### [官网](https://www.gotocloud.vip) | [在线体验](https://75o056r201.goho.co)
 
 > 体验账号：gotocloud / gtcgct123!
 
