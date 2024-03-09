@@ -1,5 +1,5 @@
 ## build
-FROM golang:1.19-alpine3.16 AS build-env
+FROM golang:1.22.1-alpine3.19 AS build-env
 
 RUN apk add build-base
 
@@ -13,7 +13,7 @@ RUN go env -w GO111MODULE=on \
     && go build -o gtc
 
 ## run
-FROM alpine:3.16
+FROM alpine:3.19
 
 ADD conf/*.yaml /gotocloud/conf/
 
